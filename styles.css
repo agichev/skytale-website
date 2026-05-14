@@ -363,6 +363,19 @@ img {
   text-transform: uppercase;
 }
 
+.made-in--button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.made-in--button:focus-visible {
+  outline: 1px solid #3c3034;
+  outline-offset: 6px;
+  border-radius: 10px;
+}
+
 .made-in__white {
   color: #ffffff;
 }
