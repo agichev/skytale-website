@@ -23,6 +23,8 @@
   <meta name="twitter:title" content="Skytale Messenger">
   <meta name="twitter:description" content="Try real communication with a privacy-focused messenger.">
   <meta name="twitter:image" content="https://skytale.dpdns.org/src/logo.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
   <link rel="apple-touch-icon" sizes="512x512" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +47,33 @@
       "keywords": "skytale messenger, skytale мессенджер, скитала мессенджер, skytale, скитала"
     }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Skytale",
+      "url": "https://skytale.dpdns.org/",
+      "logo": "https://skytale.dpdns.org/src/logo.png",
+      "sameAs": [
+        "https://github.com/agichev/skytale-mobile-app",
+        "https://bsky.app/profile/skytale.dpdns.org"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "help@skytale.dpdns.org",
+        "contactType": "customer support"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Skytale Messenger",
+      "url": "https://skytale.dpdns.org/en/",
+      "inLanguage": "en"
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -54,11 +83,13 @@
         <span class="brand__name">Skytale</span>
       </a>
       <nav class="header-nav" aria-label="Main navigation">
-        <a href="#reasons">Why Skytale</a>
-        <a href="#support">Support</a>
-        <a href="https://bsky.app/profile/skytale.dpdns.org" target="_blank" rel="noreferrer">Bluesky</a>
+        <div class="header-nav__links">
+          <a href="#reasons">Why Skytale</a>
+          <a href="#support">Support</a>
+          <a href="https://bsky.app/profile/skytale.dpdns.org" target="_blank" rel="noreferrer">Bluesky</a>
+        </div>
         <div class="lang-links" aria-label="Language switcher">
-          <a class="lang-links__item lang-links__item--active" href="../en/">EN</a>
+          <a class="lang-links__item lang-links__item--active" href="../en/" aria-current="page">EN</a>
           <a class="lang-links__item" href="../ru/">RU</a>
         </div>
       </nav>

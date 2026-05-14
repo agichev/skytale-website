@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skytale Messenger</title>
+  <title>Skytale Мессенджер</title>
   <meta name="description" content="Skytale Messenger — мессенджер с фокусом на приватность, простую регистрацию, защищённые данные, шифрование сообщений и полное удаление данных после очистки чатов или удаления аккаунта.">
   <meta name="keywords" content="skytale messenger, skytale мессенджер, скитала мессенджер, skytale, скитала, приватный мессенджер, защищённый мессенджер">
   <meta name="robots" content="index,follow">
@@ -14,15 +14,17 @@
   <link rel="alternate" hreflang="en" href="https://skytale.dpdns.org/en/">
   <link rel="alternate" hreflang="ru" href="https://skytale.dpdns.org/ru/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Skytale Messenger">
+  <meta property="og:title" content="Skytale Мессенджер">
   <meta property="og:description" content="Попробуйте настоящее общение с приватным мессенджером Skytale.">
   <meta property="og:url" content="https://skytale.dpdns.org/ru/">
   <meta property="og:site_name" content="Skytale">
   <meta property="og:image" content="https://skytale.dpdns.org/src/logo.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Skytale Messenger">
+  <meta name="twitter:title" content="Skytale Мессенджер">
   <meta name="twitter:description" content="Попробуйте настоящее общение с приватным мессенджером Skytale.">
   <meta name="twitter:image" content="https://skytale.dpdns.org/src/logo.png">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
   <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
   <link rel="apple-touch-icon" sizes="512x512" href="../favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +47,33 @@
       "keywords": "skytale messenger, skytale мессенджер, скитала мессенджер, skytale, скитала"
     }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Skytale",
+      "url": "https://skytale.dpdns.org/",
+      "logo": "https://skytale.dpdns.org/src/logo.png",
+      "sameAs": [
+        "https://github.com/agichev/skytale-mobile-app",
+        "https://bsky.app/profile/skytale.dpdns.org"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "help@skytale.dpdns.org",
+        "contactType": "customer support"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Skytale Мессенджер",
+      "url": "https://skytale.dpdns.org/ru/",
+      "inLanguage": "ru"
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -54,12 +83,14 @@
         <span class="brand__name">Skytale</span>
       </a>
       <nav class="header-nav" aria-label="Основная навигация">
-        <a href="#reasons">Почему Skytale</a>
-        <a href="#support">Поддержка</a>
-        <a href="https://bsky.app/profile/skytale.dpdns.org" target="_blank" rel="noreferrer">Bluesky</a>
+        <div class="header-nav__links">
+          <a href="#reasons">Почему Skytale</a>
+          <a href="#support">Поддержка</a>
+          <a href="https://bsky.app/profile/skytale.dpdns.org" target="_blank" rel="noreferrer">Bluesky</a>
+        </div>
         <div class="lang-links" aria-label="Переключение языка">
           <a class="lang-links__item" href="../en/">EN</a>
-          <a class="lang-links__item lang-links__item--active" href="../ru/">RU</a>
+          <a class="lang-links__item lang-links__item--active" href="../ru/" aria-current="page">RU</a>
         </div>
       </nav>
     </div>
