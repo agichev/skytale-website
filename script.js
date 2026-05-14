@@ -56,8 +56,13 @@ soundButtons.forEach((button) => {
     audio.play().catch(() => {});
   }
 
+  function stopSound() {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
   button.addEventListener("mouseenter", playSound);
-  button.addEventListener("click", playSound);
+  button.addEventListener("mouseleave", stopSound);
 
   button.addEventListener("touchstart", () => {
     longPressTriggered = false;
@@ -76,10 +81,12 @@ soundButtons.forEach((button) => {
 
   button.addEventListener("touchend", () => {
     clearLongPress();
+    stopSound();
   }, { passive: true });
 
   button.addEventListener("touchcancel", () => {
     clearLongPress();
+    stopSound();
   }, { passive: true });
 
   button.addEventListener("contextmenu", (event) => {
