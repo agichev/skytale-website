@@ -254,45 +254,12 @@ img {
   line-height: 1.7;
 }
 
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.feature-card {
-  min-height: 100%;
-  padding: 24px;
-  border: 1px solid var(--surface-border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-}
-
-.feature-card__number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 44px;
-  min-height: 44px;
-  margin-bottom: 18px;
-  border: 1px solid #3b2a2d;
-  border-radius: 999px;
-  color: var(--text);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.feature-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
-
-.feature-card p {
-  margin: 0;
+.intro-copy {
+  max-width: 760px;
+  margin: 0 auto;
   color: var(--text-soft);
-  line-height: 1.68;
+  text-align: center;
+  line-height: 1.78;
 }
 
 .reason-list {
@@ -372,26 +339,22 @@ img {
 }
 
 .screenshot-showcase {
-  padding: 24px;
-  border: 1px solid var(--surface-border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
+  padding: 8px 0 0;
+  background: transparent;
   overflow: hidden;
 }
 
 .screenshot-frame {
   position: relative;
-  max-width: 400px;
+  max-width: 360px;
   margin: 0 auto;
-  padding: 12px 56px;
+  padding: 0 52px;
 }
 
 .screenshot-viewport {
   overflow: hidden;
-  border-radius: 32px;
-  border: 1px solid #2d2327;
-  background: #060506;
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.34);
+  border-radius: 28px;
+  background: transparent;
 }
 
 .screenshot-track {
@@ -402,11 +365,9 @@ img {
 
 .screenshot-slide {
   flex: 0 0 100%;
-  padding: 20px;
+  padding: 0;
   border: 0;
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
-    #060506;
+  background: transparent;
   cursor: zoom-in;
 }
 
@@ -422,53 +383,54 @@ img {
   position: absolute;
   top: 50%;
   z-index: 2;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   padding: 0;
-  border: 1px solid #36292d;
+  border: 0;
   border-radius: 999px;
-  background: rgba(18, 16, 18, 0.92);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   cursor: pointer;
   transform: translateY(-50%);
-  transition: background-color 140ms ease, border-color 140ms ease;
+  transition: background-color 140ms ease, opacity 140ms ease;
 }
 
 .screenshot-nav:hover,
 .screenshot-dot:hover,
 .legal-dialog__close:hover,
 .gallery-dialog__close:hover {
-  background: #1b1619;
-  border-color: #4c383d;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.screenshot-nav svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+}
+
+.screenshot-nav path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .screenshot-nav--prev {
-  left: 6px;
+  left: 0;
 }
 
 .screenshot-nav--next {
-  right: 6px;
+  right: 0;
 }
 
 .screenshot-meta {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  margin-top: 16px;
-}
-
-.screenshot-counter {
-  color: var(--text-muted);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-}
-
-.screenshot-caption {
-  margin: 8px 0 0;
-  color: var(--text-soft);
-  line-height: 1.68;
+  gap: 0;
+  margin-top: 18px;
 }
 
 .screenshot-controls {
@@ -486,8 +448,8 @@ img {
 }
 
 .screenshot-dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   padding: 0;
   border: 0;
   border-radius: 999px;
@@ -630,11 +592,11 @@ img {
 }
 
 .gallery-dialog {
-  width: min(1100px, calc(100vw - 24px));
+  width: min(760px, calc(100vw - 24px));
   max-height: calc(100vh - 24px);
   padding: 0;
-  border: 1px solid var(--surface-border);
-  border-radius: 28px;
+  border: 0;
+  border-radius: 24px;
   background: transparent;
   color: var(--text);
 }
@@ -644,30 +606,21 @@ img {
 }
 
 .gallery-dialog__panel {
-  background: var(--surface);
-}
-
-.gallery-dialog__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px 20px 0;
-}
-
-.gallery-dialog__header p {
-  margin: 0;
-  color: var(--text-soft);
-  line-height: 1.6;
+  position: relative;
+  background: transparent;
 }
 
 .gallery-dialog__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
   width: 40px;
   height: 40px;
   padding: 0;
-  border: 1px solid var(--surface-border);
+  border: 0;
   border-radius: 999px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.42);
   color: var(--text);
   cursor: pointer;
   font-size: 1.4rem;
@@ -675,21 +628,17 @@ img {
 }
 
 .gallery-dialog__body {
-  padding: 18px 20px 20px;
+  padding: 0;
 }
 
 .gallery-dialog__body img {
   width: 100%;
-  max-height: calc(100vh - 170px);
-  border-radius: 22px;
+  max-height: calc(100vh - 24px);
+  border-radius: 24px;
   object-fit: contain;
 }
 
 @media (max-width: 900px) {
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
   .reason-card {
     grid-template-columns: 1fr;
   }
@@ -844,13 +793,13 @@ img {
   }
 
   .screenshot-showcase,
-  .feature-card {
+  .support-card {
     padding-left: 18px;
     padding-right: 18px;
   }
 
   .screenshot-frame {
-    max-width: 360px;
+    max-width: 320px;
     padding: 14px 0 0;
   }
 
@@ -861,19 +810,19 @@ img {
   }
 
   .screenshot-nav--prev {
-    left: 14px;
+    left: 8px;
   }
 
   .screenshot-nav--next {
-    right: 14px;
+    right: 8px;
   }
 
   .screenshot-slide {
-    padding: 14px 14px 74px;
+    padding: 0 0 60px;
   }
 
   .screenshot-slide img {
-    max-height: 500px;
+    max-height: 460px;
     border-radius: 18px;
   }
 
@@ -901,11 +850,10 @@ img {
     padding-top: 22px;
   }
 
-  .gallery-dialog__header,
-  .gallery-dialog__body {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+.gallery-dialog__body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 }
 
 @media (max-width: 560px) {
@@ -914,13 +862,12 @@ img {
     line-height: 1.62;
   }
 
-  .feature-card {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  .intro-copy {
+    line-height: 1.68;
   }
 
   .screenshot-showcase {
-    padding: 14px;
+    padding: 0;
   }
 
   .screenshot-viewport {
@@ -928,7 +875,7 @@ img {
   }
 
   .screenshot-slide {
-    padding: 12px 12px 70px;
+    padding: 0 0 64px;
   }
 
   .screenshot-slide img {

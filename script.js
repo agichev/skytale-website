@@ -4,7 +4,6 @@ const bodyNode = document.getElementById("legal-body");
 const closeNode = document.getElementById("legal-close");
 const galleryDialog = document.getElementById("gallery-dialog");
 const galleryImage = document.getElementById("gallery-image");
-const galleryCaption = document.getElementById("gallery-caption");
 const galleryClose = document.getElementById("gallery-close");
 const soundButtons = document.querySelectorAll("[data-play-sound]");
 const siteConfig = window.SKYTALE_SITE_CONFIG || {};
@@ -63,11 +62,10 @@ function initDownloadTargets() {
 }
 
 function openGallerySlide(slide) {
-  if (!galleryDialog || !galleryImage || !galleryCaption || !slide) return;
+  if (!galleryDialog || !galleryImage || !slide) return;
 
   galleryImage.src = slide.src;
   galleryImage.alt = slide.alt;
-  galleryCaption.textContent = slide.caption;
   galleryDialog.showModal();
 }
 
@@ -79,9 +77,6 @@ function initScreenshotCarousel() {
 
   const track = root.querySelector("[data-screenshot-track]");
   const dots = root.querySelector("[data-screenshot-dots]");
-  const caption = root.querySelector("[data-screenshot-caption]");
-  const counter = root.querySelector("[data-screenshot-counter]");
-  const openButton = root.querySelector("[data-screenshot-open]");
   const previousButton = root.querySelector("[data-screenshot-prev]");
   const nextButton = root.querySelector("[data-screenshot-next]");
   const autoplayMs = Number(root.dataset.autoplayMs) || 4800;
@@ -127,13 +122,6 @@ function initScreenshotCarousel() {
 
   function render() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    if (caption) {
-      caption.textContent = localizedSlides[currentIndex].caption;
-    }
-
-    if (counter) {
-      counter.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(localizedSlides.length).padStart(2, "0")}`;
-    }
 
     slideButtons.forEach((button, index) => {
       const isActive = index === currentIndex;
@@ -199,12 +187,6 @@ function initScreenshotCarousel() {
     goTo(currentIndex + 1);
     startAutoplay();
   });
-
-  if (openButton) {
-    openButton.addEventListener("click", () => {
-      openGallerySlide(localizedSlides[currentIndex]);
-    });
-  }
 
   root.addEventListener("mouseenter", stopAutoplay);
   root.addEventListener("mouseleave", startAutoplay);

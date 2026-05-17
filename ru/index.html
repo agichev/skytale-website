@@ -117,30 +117,9 @@
     <section class="section" id="overview">
       <div class="container">
         <div class="section-heading">
-          <span class="section-eyebrow">Коротко</span>
-          <h2>Зачем может понадобиться Skytale</h2>
-          <p class="section-lead">Skytale делается как мессенджер для обычной личной переписки: с понятным интерфейсом, нормальным стартом, защищённой работой с сообщениями и удалением данных после очистки чатов или удаления аккаунта.</p>
+          <h2>Приватность не должна быть бонусной функцией</h2>
         </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-card__number">01</span>
-            <h3>Понятный с первого запуска</h3>
-            <p>Чаты, переписка, профиль и настройки расположены привычно, поэтому приложение ощущается рабочим инструментом, а не странным экспериментом.</p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-card__number">02</span>
-            <h3>Приватность не для галочки</h3>
-            <p>Защищённая передача данных и шифрование хранения сообщений на сервере здесь относятся к базе работы мессенджера, а не к красивым обещаниям.</p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-card__number">03</span>
-            <h3>Удаление не должно быть фикцией</h3>
-            <p>Если пользователь очищает чаты или удаляет аккаунт, Skytale проектируется так, чтобы эти данные не висели где-то в системе бесконечно.</p>
-          </article>
-        </div>
+        <p class="intro-copy">Skytale строится вокруг простой мысли: личная переписка должна оставаться личной, а безопасность не должна продаваться как премиальная опция или декоративная надстройка для рекламы. Идея не в том, чтобы шуметь вокруг мессенджера, а в том, чтобы сам мессенджер вызывал доверие.</p>
       </div>
     </section>
 
@@ -157,8 +136,8 @@
             </div>
             <div class="reason-card__content">
               <span class="reason-card__number">01</span>
-              <h3>Привычный сценарий общения</h3>
-              <p>В Skytale легко зайти, быстро найти нужный диалог и писать сообщения без борьбы с перегруженным интерфейсом.</p>
+              <h3>Удобство</h3>
+              <p>Простой и привычный интерфейс, а также максимально простая регистрация.</p>
             </div>
           </article>
 
@@ -168,8 +147,8 @@
             </div>
             <div class="reason-card__content">
               <span class="reason-card__number">02</span>
-              <h3>Защищённая переписка</h3>
-              <p>Данные сообщений защищаются при передаче и хранятся на сервере в зашифрованном виде, что усложняет несанкционированный доступ.</p>
+              <h3>Безопасность</h3>
+              <p>Данные защищены от перехвата и взлома.</p>
             </div>
           </article>
 
@@ -179,8 +158,8 @@
             </div>
             <div class="reason-card__content">
               <span class="reason-card__number">03</span>
-              <h3>Понятная логика удаления</h3>
-              <p>Если вы чистите чаты или удаляете аккаунт, Skytale проектируется так, чтобы эти данные исчезали насовсем, а не зависали в системе без срока.</p>
+              <h3>Шифрование и удаление данных</h3>
+              <p>Все данные шифруются на сервере. При очистке чатов или удалении аккаунта данные не сохраняются, а удаляются навсегда.</p>
             </div>
           </article>
         </div>
@@ -190,8 +169,7 @@
     <section class="section" id="screenshots">
       <div class="container">
         <div class="section-heading">
-          <span class="section-eyebrow">Внутри приложения</span>
-          <h2>Интерфейс Skytale</h2>
+          <h2>Скриншоты</h2>
         </div>
 
         <div
@@ -201,15 +179,22 @@
           data-dot-label="Перейти к скриншоту"
         >
           <div class="screenshot-frame">
-            <button class="screenshot-nav screenshot-nav--prev" type="button" data-screenshot-prev aria-label="Предыдущий скриншот">&#8592;</button>
+            <button class="screenshot-nav screenshot-nav--prev" type="button" data-screenshot-prev aria-label="Предыдущий скриншот">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14.5 5.5 8 12l6.5 6.5"></path>
+              </svg>
+            </button>
             <div class="screenshot-viewport">
               <div class="screenshot-track" data-screenshot-track></div>
             </div>
-            <button class="screenshot-nav screenshot-nav--next" type="button" data-screenshot-next aria-label="Следующий скриншот">&#8594;</button>
+            <button class="screenshot-nav screenshot-nav--next" type="button" data-screenshot-next aria-label="Следующий скриншот">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9.5 5.5 16 12l-6.5 6.5"></path>
+              </svg>
+            </button>
           </div>
 
           <div class="screenshot-meta">
-            <div class="screenshot-counter" data-screenshot-counter></div>
             <div class="screenshot-controls">
               <div class="screenshot-dots" data-screenshot-dots></div>
             </div>
@@ -273,10 +258,7 @@
 
   <dialog class="gallery-dialog" id="gallery-dialog">
     <div class="gallery-dialog__panel">
-      <div class="gallery-dialog__header">
-        <p id="gallery-caption"></p>
-        <button class="gallery-dialog__close" id="gallery-close" type="button" aria-label="Закрыть скриншот">&times;</button>
-      </div>
+      <button class="gallery-dialog__close" id="gallery-close" type="button" aria-label="Закрыть скриншот">&times;</button>
       <div class="gallery-dialog__body">
         <img id="gallery-image" src="" alt="">
       </div>
