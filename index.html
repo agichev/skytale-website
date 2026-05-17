@@ -9,29 +9,29 @@
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#090809">
   <meta name="format-detection" content="telephone=no">
-  <link rel="canonical" href="https://skytale.dpdns.org/">
+  <link rel="canonical" href="https://skytale.dpdns.org/en/">
   <link rel="alternate" hreflang="x-default" href="https://skytale.dpdns.org/">
   <link rel="alternate" hreflang="en" href="https://skytale.dpdns.org/en/">
   <link rel="alternate" hreflang="ru" href="https://skytale.dpdns.org/ru/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Skytale Messenger">
   <meta property="og:description" content="Try real communication with a privacy-focused messenger.">
-  <meta property="og:url" content="https://skytale.dpdns.org/">
+  <meta property="og:url" content="https://skytale.dpdns.org/en/">
   <meta property="og:site_name" content="Skytale">
   <meta property="og:image" content="https://skytale.dpdns.org/src/logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Skytale Messenger">
   <meta name="twitter:description" content="Try real communication with a privacy-focused messenger.">
   <meta name="twitter:image" content="https://skytale.dpdns.org/src/logo.png">
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="./favicon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <script type="application/ld+json">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json" data-software-schema>
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -39,8 +39,8 @@
       "alternateName": ["Skytale Messenger", "Skytale мессенджер", "Скитала мессенджер"],
       "applicationCategory": "CommunicationApplication",
       "operatingSystem": "Android",
-      "url": "https://skytale.dpdns.org/",
-      "downloadUrl": "https://github.com/agichev/skytale-mobile-app/releases/download/1.0.35/skytale.apk",
+      "url": "https://skytale.dpdns.org/en/",
+      "downloadUrl": "https://github.com/agichev/skytale-mobile-app/releases/latest",
       "image": "https://skytale.dpdns.org/src/logo.png",
       "description": "Skytale Messenger is a privacy-focused messenger with a familiar interface, simple registration, protected data, and encrypted message storage.",
       "inLanguage": "en",
@@ -70,38 +70,29 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Skytale Messenger",
-      "url": "https://skytale.dpdns.org/",
+      "url": "https://skytale.dpdns.org/en/",
       "inLanguage": "en"
     }
-  </script>
-  <script>
-    (function () {
-      var path = window.location.pathname;
-      var isRoot = path === "/" || path.endsWith("/index.html") || path === "/site/" || path.endsWith("/site/index.html");
-      if (!isRoot) return;
-      var language = (navigator.language || "").toLowerCase();
-      if (language.startsWith("ru")) {
-        window.location.replace("/ru/");
-      }
-    })();
   </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-row">
-      <a class="brand" href="./" aria-label="Skytale home">
-        <img class="brand__logo" src="./src/logo.png" alt="Skytale logo">
+      <a class="brand" href="/en/" aria-label="Skytale home">
+        <img class="brand__logo" src="/src/logo.png" alt="Skytale logo">
         <span class="brand__name">Skytale</span>
       </a>
       <nav class="header-nav" aria-label="Main navigation">
         <div class="header-nav__links">
+          <a href="#overview">What it gives you</a>
           <a href="#reasons">Why Skytale</a>
+          <a href="#screenshots">Screenshots</a>
           <a href="#support">Support</a>
           <a href="https://bsky.app/profile/skytale.dpdns.org" target="_blank" rel="noreferrer">Bluesky</a>
         </div>
         <div class="lang-links" aria-label="Language switcher">
-          <a class="lang-links__item lang-links__item--active" href="./" aria-current="page">EN</a>
-          <a class="lang-links__item" href="./ru/">RU</a>
+          <a class="lang-links__item lang-links__item--active" href="/en/" aria-current="page">EN</a>
+          <a class="lang-links__item" href="/ru/">RU</a>
         </div>
       </nav>
     </div>
@@ -110,15 +101,45 @@
   <main>
     <section class="hero">
       <div class="container hero__inner">
-        <img class="hero__logo" src="./src/logo.png" alt="Skytale logo">
+        <img class="hero__logo" src="/src/logo.png" alt="Skytale logo">
         <h1 class="hero__title">Skytale</h1>
         <p class="hero__subtitle">Try real communication.</p>
         <div class="hero__actions">
-          <a class="button button--primary" href="https://github.com/agichev/skytale-mobile-app/releases/download/1.0.35/skytale.apk" target="_blank" rel="noreferrer">Download for Android</a>
+          <a class="button button--primary" data-android-download href="https://github.com/agichev/skytale-mobile-app/releases/latest" target="_blank" rel="noreferrer">Download for Android</a>
           <span class="button button--disabled" aria-disabled="true">
             <span>Download for PC</span>
             <small>In development</small>
           </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-eyebrow">Quick overview</span>
+          <h2>What a new user can expect from Skytale</h2>
+          <p class="section-lead">Skytale is built for people who want a messenger that feels straightforward from the first launch and handles private communication without turning every screen into a crowded ecosystem.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-card__number">01</span>
+            <h3>Fast to understand</h3>
+            <p>The interface follows familiar messaging patterns, so you spend less time learning the app and more time actually using it.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-card__number">02</span>
+            <h3>Private by intent</h3>
+            <p>Protected transport and encrypted server-side storage are there for the core job of messaging, not as an afterthought.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-card__number">03</span>
+            <h3>Less leftover data</h3>
+            <p>When chats are cleared or an account is deleted, the service is designed not to keep that data around permanently.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -132,36 +153,72 @@
         <div class="reason-list">
           <article class="reason-card">
             <div class="reason-card__media">
-              <img src="./src/1.png" alt="Skytale usability illustration">
+              <img src="/src/1.png" alt="Skytale usability illustration">
             </div>
             <div class="reason-card__content">
               <span class="reason-card__number">01</span>
-              <h3>Usability</h3>
-              <p>A simple and familiar interface, plus registration that is as easy as possible.</p>
+              <h3>Familiar flow</h3>
+              <p>Skytale keeps the basics easy: open the app, find the chat you need, and write without adapting to an overloaded interface.</p>
             </div>
           </article>
 
           <article class="reason-card">
             <div class="reason-card__media">
-              <img src="./src/2.png" alt="Skytale security illustration">
+              <img src="/src/2.png" alt="Skytale security illustration">
             </div>
             <div class="reason-card__content">
               <span class="reason-card__number">02</span>
-              <h3>Security</h3>
-              <p>Data is protected against interception and unauthorized access.</p>
+              <h3>Protected communication</h3>
+              <p>Message data is protected in transit and stored in encrypted form on the server, which makes unauthorized access harder.</p>
             </div>
           </article>
 
           <article class="reason-card">
             <div class="reason-card__media">
-              <img src="./src/3.png" alt="Skytale encryption and data deletion illustration">
+              <img src="/src/3.png" alt="Skytale encryption and data deletion illustration">
             </div>
             <div class="reason-card__content">
               <span class="reason-card__number">03</span>
-              <h3>Encryption and data deletion</h3>
-              <p>All data is encrypted on the server. When chats are cleared or an account is deleted, data is not kept and is removed permanently.</p>
+              <h3>Predictable cleanup</h3>
+              <p>If you clear chats or delete an account, Skytale is built so that this data is removed permanently instead of lingering indefinitely.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screenshots">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-eyebrow">Inside the app</span>
+          <h2>See the interface before you install it</h2>
+          <p class="section-lead">The screenshots rotate automatically, open in full size on tap, and stay comfortable to browse on both desktop and mobile.</p>
+        </div>
+
+        <div
+          class="screenshot-showcase"
+          data-screenshot-carousel
+          data-autoplay-ms="4800"
+          data-dot-label="Go to screenshot"
+        >
+          <div class="screenshot-frame">
+            <button class="screenshot-nav screenshot-nav--prev" type="button" data-screenshot-prev aria-label="Previous screenshot">&#8592;</button>
+            <div class="screenshot-viewport">
+              <div class="screenshot-track" data-screenshot-track></div>
+            </div>
+            <button class="screenshot-nav screenshot-nav--next" type="button" data-screenshot-next aria-label="Next screenshot">&#8594;</button>
+          </div>
+
+          <div class="screenshot-meta">
+            <div>
+              <div class="screenshot-counter" data-screenshot-counter></div>
+              <p class="screenshot-caption" data-screenshot-caption></p>
+            </div>
+            <div class="screenshot-controls">
+              <div class="screenshot-dots" data-screenshot-dots></div>
+              <button class="button button--secondary" type="button" data-screenshot-open>Open screenshot</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -200,7 +257,7 @@
         <p class="footer-title">Contact</p>
         <a class="footer-link footer-link--inline" href="mailto:help@skytale.dpdns.org">help@skytale.dpdns.org</a>
         <p class="footer-title footer-title--spaced">Build</p>
-        <button class="made-in made-in--button" type="button" data-play-sound="./src/sound.mp3" aria-label="Play sound for Made in Russia">
+        <button class="made-in made-in--button" type="button" data-play-sound="/src/sound.mp3" aria-label="Play sound for Made in Russia">
           <span class="made-in__white">Made</span>
           <span class="made-in__blue">in</span>
           <span class="made-in__red">Russia</span>
@@ -216,6 +273,18 @@
         <button class="legal-dialog__close" id="legal-close" type="button" aria-label="Close">&times;</button>
       </div>
       <div class="legal-dialog__body" id="legal-body"></div>
+    </div>
+  </dialog>
+
+  <dialog class="gallery-dialog" id="gallery-dialog">
+    <div class="gallery-dialog__panel">
+      <div class="gallery-dialog__header">
+        <p id="gallery-caption"></p>
+        <button class="gallery-dialog__close" id="gallery-close" type="button" aria-label="Close screenshot">&times;</button>
+      </div>
+      <div class="gallery-dialog__body">
+        <img id="gallery-image" src="" alt="">
+      </div>
     </div>
   </dialog>
 
@@ -300,6 +369,7 @@ The operator may suspend or terminate access where required by law, necessary fo
 
 These terms are governed by the laws applicable to the operator and the service. For users in the Russian Federation, mandatory rules of Russian law may apply.</template>
 
-  <script src="./script.js"></script>
+  <script src="/site-config.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
