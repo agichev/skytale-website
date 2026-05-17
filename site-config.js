@@ -1,5 +1,5 @@
 window.SKYTALE_SITE_CONFIG = Object.freeze({
-  androidDownloadUrl: "https://github.com/agichev/skytale-mobile-app/releases/download/1.0.36/skytale.apk",
+  androidDownloadUrl: "https://github.com/agichev/skytale-mobile-app/releases/download/1.0.35/skytale.apk",
   screenshots: [
     {
       src: "/screen/1.png",

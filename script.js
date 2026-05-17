@@ -95,7 +95,7 @@ function initScreenshotCarousel() {
     caption: slide.caption?.[pageLanguage] || slide.caption?.en || ""
   }));
 
-  if (!track || !dots || !caption || !counter || !openButton || !previousButton || !nextButton) {
+  if (!track || !dots || !previousButton || !nextButton) {
     return;
   }
 
@@ -127,8 +127,13 @@ function initScreenshotCarousel() {
 
   function render() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
-    caption.textContent = localizedSlides[currentIndex].caption;
-    counter.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(localizedSlides.length).padStart(2, "0")}`;
+    if (caption) {
+      caption.textContent = localizedSlides[currentIndex].caption;
+    }
+
+    if (counter) {
+      counter.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(localizedSlides.length).padStart(2, "0")}`;
+    }
 
     slideButtons.forEach((button, index) => {
       const isActive = index === currentIndex;
@@ -195,9 +200,11 @@ function initScreenshotCarousel() {
     startAutoplay();
   });
 
-  openButton.addEventListener("click", () => {
-    openGallerySlide(localizedSlides[currentIndex]);
-  });
+  if (openButton) {
+    openButton.addEventListener("click", () => {
+      openGallerySlide(localizedSlides[currentIndex]);
+    });
+  }
 
   root.addEventListener("mouseenter", stopAutoplay);
   root.addEventListener("mouseleave", startAutoplay);
